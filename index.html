@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Travel Simulator</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+    canvas {
+      display: block;
+    }
+    #ui {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #ui label, #ui button {
+      margin: 10px 0;
+      display: block;
+    }
+    #ui select, #ui button {
+      font-size: 16px;
+    }
+    #ui p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <!-- UI Controls -->
+  <div id="ui">
+    <label for="destination">Select Destination Star:</label>
+    <select id="destination">
+      <option value="proxima-centauri" data-distance="4.246">Proxima Centauri (4.246 light-years)</option>
+      <option value="alpha-centauri" data-distance="4.367">Alpha Centauri (4.367 light-years)</option>
+      <option value="barnards-star" data-distance="5.963">Barnard's Star (5.963 light-years)</option>
+      <!-- Add more stars with distance values -->
+    </select>
+
+    <button id="launch">Launch</button>
+
+    <!-- Info Display -->
+    <p>Current Speed: <span id="speed">0</span> km/s</p>
+    <p>Distance Traveled: <span id="distance-traveled">0</span> km</p>
+    <p>Distance to Destination: <span id="distance-to-destination">0</span> km</p>
+  </div>
+  
+  <script src="ui.js"></script>
+</body>
+</html>
